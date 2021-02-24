@@ -4,12 +4,18 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serve-dist": "serve -s dist",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "hml-serve-dist": "serve -s dist_hml",
+    "hml-build": "vue-cli-service build --mode homologation --dest dist_hml"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "sockjs-client": "^1.5.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.1",
+    "webstomp-client": "^1.2.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
