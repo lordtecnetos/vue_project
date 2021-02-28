@@ -22,21 +22,22 @@ export default {
   data() {
     return {
       qtd: 0,
-      audio: new Audio(bell),
     };
   },
   methods: {
     aumentar() {
+      this.$root.$emit("log", "aumetei");
       this.qtd += 1;
     },
     zerar() {
+      this.$root.$emit("log", "zerei");
       this.qtd = 0;
     },
   },
   watch: {
     qtd(n) {
       if (n % 3 == 0) {
-        this.audio.play();
+        new Audio(bell).play();
       }
     },
   },
